@@ -1,0 +1,3 @@
+Occasionally you may have the need to remove a module or form that you no longer need.
+
+Right-click on the module or form you wish to remove to show the right click short cut menu.

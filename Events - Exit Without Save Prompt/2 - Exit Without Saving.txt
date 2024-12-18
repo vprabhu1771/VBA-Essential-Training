@@ -1,0 +1,6 @@
+You can exit or close Excel without asking the user to save by setting display alerts to False and calling Application.Quit. Here’s some simple example code to exit Excel without prompting the user to save:
+
+Sub ExitWithoutPrompt()
+     Application.DisplayAlerts = False
+     Application.Quit
+End Sub

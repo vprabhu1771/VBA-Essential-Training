@@ -1,0 +1,7 @@
+If you ever need to count the number of rows that were selected, use Selection.Rows.Count
+
+Public Sub CountMyRows()
+
+MsgBox Selection.Rows.Count
+
+End Sub

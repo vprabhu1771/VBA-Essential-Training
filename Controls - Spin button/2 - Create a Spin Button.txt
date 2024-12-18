@@ -1,0 +1,1 @@
+In order to insert a Spin button in the Worksheet, you need to go to the Developer tab, click Insert and under ActiveX Controls choose Spin button:

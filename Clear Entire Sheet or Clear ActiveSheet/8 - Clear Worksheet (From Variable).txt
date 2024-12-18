@@ -1,0 +1,7 @@
+To clear a sheet defined by an object variable use the following code:
+
+dim ws as worksheet
+
+Set ws = Sheets("Sheet1")
+
+ws.Cells.Clear

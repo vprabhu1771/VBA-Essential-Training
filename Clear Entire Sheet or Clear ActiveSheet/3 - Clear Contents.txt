@@ -1,0 +1,9 @@
+Instead, you can clear ONLY the cell contents:
+
+Cells.ClearContents
+
+Sub clear_cells()
+
+Cells.ClearContents
+
+End Sub

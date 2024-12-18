@@ -1,0 +1,9 @@
+Here is how you can create an InputBox where the data is returned into a string variable.
+
+Public Sub MyInputBox()
+
+Dim strInput As String
+
+strInput = InputBox("This is my InputBox", "MyInputTitle", "Enter your input text HERE")
+
+End Sub

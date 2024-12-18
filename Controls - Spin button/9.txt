@@ -1,0 +1,1 @@
+Image 3. Increase a number using the Spin button in VBA

@@ -1,0 +1,13 @@
+or only the Cell Formats:
+
+Cells.ClearFormats
+
+
+Sub clear_cells()
+
+Cells.ClearFormats
+
+End Sub
+
+
+By typing: Cells.Clear into the VBA Editor you can see the list of Clear methods available to you:

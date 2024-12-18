@@ -1,0 +1,1 @@
+We will show how to delete the file Sample file 1.xlsx in the folder VBA Folder. The folder with the file now looks like in Image 1:

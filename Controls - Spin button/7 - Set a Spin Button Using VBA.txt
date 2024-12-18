@@ -1,0 +1,36 @@
+We will first see how to set properties of a Spin button in VBA and get a value in Worksheet. The code needs to be in event Change of the object spbSpinButton. You can enter this event by right-clicking on the Spin button and choosing View Code option. Here is the code:
+
+Private Sub spbSpinButton_Change()
+
+    Sheet1.spbSpinButton.Min = 100
+
+    Sheet1.spbSpinButton.Max = 200
+
+    Sheet1.spbSpinButton.SmallChange = 10
+
+    Sheet1.Range("B2") = Sheet1.spbSpinButton.Value
+
+End Sub
+
+
+First, we set the lower limit for number range:
+
+Sheet1.spbSpinButton.Min = 100
+
+
+After that, we set the upper limit for number range:
+
+Sheet1.spbSpinButton.Max = 200
+
+
+We also need to set the step for number incrementation:
+
+Sheet1.spbSpinButton.SmallChange = 10
+
+
+Finally, we are assigning the current value of the Spin button to the cell B2. This value is in the Value attribute of the object Sheet1.spbSpinButton:
+
+Sheet1.Range("B2") = Sheet1.spbSpinButton.Value
+
+
+Now, whenever we click on the Spin button, the value will increase or decrease by 10 in the range 100-200:

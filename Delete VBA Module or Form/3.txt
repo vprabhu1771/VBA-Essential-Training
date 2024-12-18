@@ -1,0 +1,5 @@
+Click Remove (in this case Module2)
+
+OR
+
+Click on the File menu, and then click on Remove (Module2).

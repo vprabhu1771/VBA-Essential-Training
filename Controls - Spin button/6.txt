@@ -1,0 +1,3 @@
+Image 2. Change Spin button Properties
+
+Here you can set different properties of the Spin button. For the beginning, we changed the attribute Name to spbSpinButton. Now, we can use the Spin button with this name in VBA code. Other important attributes are Min and Max, which define a number range and SmallChange which defines a step of incrementation.

@@ -1,0 +1,46 @@
+We can also read a text file in VBA by using the FileSystemObject.  In the code below we have used late binding with the File System Object.  You can also create a reference to it in your VBA project.  See here for more information.
+
+Sub ReadTextFile()
+  Dim strLine As String
+  Dim FSO as Object
+  Dim TSO As Object
+  Set FSO = CreateObject("Scripting.FileSystemObject")
+  Set TSO = FSO.OpenTextFile("C:\Test\TestFile.txt")
+  Do While Not TSO.AtEndOfStream
+     strLine = TSO.ReadLine
+     ActiveCell = strLine
+     ActiveCell.Offset(1, 0).Select
+  Loop
+  TSO.Close
+  Set TSO = Nothing
+  Set FSO = Nothing
+End Sub
+
+We can create a slightly more complicated loop if we want to separate the lines into cells by their delimiters.  Here we have used early binding in the code and declared the File System Object.
+
+Sub ReadTextFileWithSeparators()
+  Dim StrLine As String
+  Dim FSO As New FileSystemObject
+  Dim TSO As Object
+  Dim StrLineElements As Variant
+  Dim Index As Long
+  Dim i As Long
+  Dim Delimiter As String
+  Set FSO = CreateObject("Scripting.FileSystemObject")
+  Set TSO = FSO.OpenTextFile("C:\Test\TestFile.txt")
+  Delimiter = ","
+  Index = 1
+  Do While TSO.AtEndOfStream = False
+    StrLine = TSO.ReadLine
+    StrLineElements = Split(StrLine, Delimiter)
+    For i = LBound(StrLineElements) To UBound(StrLineElements)
+       Cells(Index, i + 1).Value = StrLineElements(i)
+    Next i
+    Index = Index + 1
+  Loop
+  TSO.Close
+  Set TSO = Nothing
+  Set FSO = Nothing
+End Sub
+
+This will result in the lines being separated into individual cells in Excel as per the graphic below.

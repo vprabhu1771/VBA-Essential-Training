@@ -1,0 +1,54 @@
+It looks like you are trying to read a text file with comma-separated values and populate the data into a worksheet using VBA. The error you are encountering, "User Defined type not defined," suggests that the necessary library or reference for the `FileSystemObject` is not enabled in your VBA environment.
+
+Here's how you can fix this issue:
+
+1. Open the Visual Basic for Applications (VBA) editor by pressing `Alt + F11`.
+2. In the VBA editor, go to "Tools" > "References."
+3. In the "References" dialog, look for "Microsoft Scripting Runtime" and check it.
+
+This reference is required for using the `FileSystemObject`. Checking it should resolve the "User Defined type not defined" error.
+
+Here's an updated version of your code:
+
+```vba
+Sub ReadTextFileWithSeparators()
+    Dim StrLine As String
+    Dim FSO As Object
+    Dim TSO As Object
+    Dim StrLineElements As Variant
+    Dim Index As Long
+    Dim i As Long
+    Dim Delimiter As String
+    
+    ' Create a FileSystemObject
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+    
+    ' Open the text file
+    Set TSO = FSO.OpenTextFile("C:\Test\TestFile.txt")
+    
+    Delimiter = ","
+    Index = 1
+    
+    ' Loop through the lines of the text file
+    Do While TSO.AtEndOfStream = False
+        StrLine = TSO.ReadLine
+        StrLineElements = Split(StrLine, Delimiter)
+        
+        ' Loop through the elements in the line and write to worksheet
+        For i = LBound(StrLineElements) To UBound(StrLineElements)
+            Cells(Index, i + 1).Value = StrLineElements(i)
+        Next i
+        
+        Index = Index + 1
+    Loop
+    
+    ' Close the text file
+    TSO.Close
+    
+    ' Release the objects
+    Set TSO = Nothing
+    Set FSO = Nothing
+End Sub
+```
+
+Make sure to enable the "Microsoft Scripting Runtime" reference as described above, and then try running the code again.

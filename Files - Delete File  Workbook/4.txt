@@ -1,0 +1,9 @@
+Here is the code which will delete the file:
+
+Sub DeleteSingleFile()
+
+Kill "C:\VBA Folder\Sample File 2.xlsx"
+
+End Sub
+
+After running the code, the file Sample file 1.xlsx is now deleted from the VBA Folder. The output is in Image 2:

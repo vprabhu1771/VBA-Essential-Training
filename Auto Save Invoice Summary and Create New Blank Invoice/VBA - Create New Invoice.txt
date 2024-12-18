@@ -1,0 +1,13 @@
+Sub CreateNewInvoice()
+
+	invoice_no = Range("E3")
+
+	Range("b3:b6,a9:e13,e5").ClearContents
+
+	Range("E3") = invoice_no + 1
+
+	ThisWorkbook.Save
+
+	MsgBox "Your Next Invoice No. is " & invoice_no + 1
+
+End Sub

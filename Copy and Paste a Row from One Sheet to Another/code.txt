@@ -1,0 +1,9 @@
+Sub addition()
+
+    'Assign a hard-coded formula to a single cell
+    Range("c1").Formula = "=a1+b1"
+    
+    'Assign a flexible formula to a range of cells
+    Range("d1:d100").FormulaR1C1 = "=RC2+RC3"
+
+End Sub

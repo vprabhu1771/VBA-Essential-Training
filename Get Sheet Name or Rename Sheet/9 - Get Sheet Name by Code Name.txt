@@ -1,0 +1,15 @@
+In VBA, when working with Sheets, you can reference the usual Tab name:
+
+Sheets("TabName").Activate
+
+or the VBA code name:
+
+CodeName.Activate
+
+
+Referencing the code name is desirable in case the Sheet tab name ever changes. If you allow you Excel user access to changing sheet names you should reference the code name in your VBA code so that a Sheet tab name mismatch doesn’t cause an error. Sheet code names are discussed in more detail here.
+
+
+To get the Sheet name using the VBA Code name, do the following:
+
+MsgBox CodeName.Name

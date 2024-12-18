@@ -1,0 +1,6 @@
+Sub multiplication()
+
+    'Assign a hard-coded formula to a single cell
+    Range("c1").Formula = "=a1*b1"
+
+End Sub

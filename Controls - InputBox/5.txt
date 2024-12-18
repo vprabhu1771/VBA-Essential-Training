@@ -1,0 +1,1 @@
+Notice first we declare a variable. This variable will be assigned the value that the user enters.  We used variable type String in order for the Input box to accept text strings (which includes any alpha numeric characters).

@@ -1,0 +1,7 @@
+You can return the input that you type into an input box into a specific cell in your Excel sheet.
+
+Sub EnterName()
+
+Range("A1") = InputBox("Please type in your name", "Enter Name", "Enter name HERE")
+
+End Sub

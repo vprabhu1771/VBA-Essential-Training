@@ -1,0 +1,7 @@
+This will display the first worksheet name in a message box:
+
+MsgBox Sheets(1).Name
+
+This will display the name of the last worksheet in the workbook:
+
+MsgBox Sheets(Sheets.Count).Name

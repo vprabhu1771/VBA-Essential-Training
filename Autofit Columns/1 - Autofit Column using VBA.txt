@@ -1,0 +1,5 @@
+After you manipulate a worksheet with VBA it may be necessary to Autofit your columns to present the nicest end result possible. Here’s how to autofit columns using VBA.
+
+This code autofits columns A and B. The autofit is applied to the active sheet.
+
+Columns("A:B").EntireColumn.Autofit

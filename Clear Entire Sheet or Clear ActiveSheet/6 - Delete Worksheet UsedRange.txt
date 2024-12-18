@@ -1,0 +1,3 @@
+You can also delete the entire worksheet’s UsedRange. This can also delete objects (shapes, charts, textboxes).
+
+ActiveSheet.UsedRange.Delete

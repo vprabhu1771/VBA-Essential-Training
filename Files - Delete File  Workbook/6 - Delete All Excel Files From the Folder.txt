@@ -1,0 +1,9 @@
+The same command enables you to delete all Excel files from the folder. You just need to put an asterisk (*) instead of the file name. An asterisk replaces any string. Here is the code:
+
+Sub DeleteAllFile()
+
+Kill "C:\VBA Folder\*.xlsx"
+
+End Sub
+
+As you can see in Image 3, all Excel files from Folder VBA are deleted:

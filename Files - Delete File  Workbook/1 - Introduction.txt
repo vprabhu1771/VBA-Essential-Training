@@ -1,0 +1,3 @@
+VBA allows you to delete an existing file, using the Kill command. In this tutorial, you will learn how to delete a specific file or multiple files.
+
+If you want to learn how to copy and rename a file, you can click on this link: VBA Copy File

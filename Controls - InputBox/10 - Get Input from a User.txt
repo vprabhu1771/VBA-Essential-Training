@@ -1,0 +1,1 @@
+Here is another example using the most popular features of an InputBox.

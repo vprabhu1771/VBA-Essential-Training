@@ -1,0 +1,1 @@
+The VBA Input Box allows us to prompt the user to input information.  The information can then be used in our VBA Code or in an Excel worksheet.

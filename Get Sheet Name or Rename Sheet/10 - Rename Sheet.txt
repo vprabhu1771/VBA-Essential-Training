@@ -1,0 +1,1 @@
+You can rename Sheets by adjusting the name property of the Sheets or Worksheets object.

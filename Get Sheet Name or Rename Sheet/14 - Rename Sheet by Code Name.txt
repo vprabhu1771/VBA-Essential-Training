@@ -1,0 +1,3 @@
+This code will rename a sheet using it’s VBA code name (discussed above):
+
+Component.Name = "NewName"

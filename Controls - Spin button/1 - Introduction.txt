@@ -1,0 +1,3 @@
+In VBA, you can create a Spin button which allows a user to increment a number in the cell in a defined range. Every time a user clicks on a button, the number will increase or decrease. In this tutorial, you will learn how to create a Spin button and use it in Excel and VBA.
+
+If you want to learn how to use an Option button, click on this link: Option button Excel VBA

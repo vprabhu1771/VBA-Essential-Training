@@ -1,0 +1,1 @@
+In VBA it’s fast and easy to clear an entire sheet (or worksheet).

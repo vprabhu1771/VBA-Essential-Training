@@ -1,0 +1,11 @@
+This will clear the Activesheet’s cells of all cell properties: contents, formats, comments, etc:
+
+Cells.Clear
+
+or
+
+Sub clear_cells()
+
+Cells.Clear
+
+End Sub

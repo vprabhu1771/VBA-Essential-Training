@@ -1,0 +1,12 @@
+If you declare a number variable, you will need to enter a number only into the input box.
+
+Public Sub MyInputBox()
+
+Dim iInput As Integer
+
+iInput = InputBox("Please enter a number", "Create Invoice Number", 1)
+
+End Sub
+
+
+First we declare the number variable as an integer variable.   We can then also put a default value of 1 in the input box.

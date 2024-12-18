@@ -1,0 +1,7 @@
+If you ever need to count the number of Columns that were selected, use Selection.Columns.Count
+
+Public Sub CountMyColumns()
+
+MsgBox Selection.Columns.Count
+
+End Sub

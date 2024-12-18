@@ -1,0 +1,20 @@
+We can also return input data to an Excel Sheet using a variable.
+
+Sub EnterNumber()
+
+   On Error Resume Next
+
+   Dim dblAmount As Double
+
+   dblAmount = InputBox("Please enter the required amount", "Enter Amount")
+
+   If dblAmount <> 0 Then
+      Range("A1") = dblAmount
+      MsgBox "Congrats"
+   Else
+      MsgBox "You did not enter a number!"
+   End If
+
+End Sub
+
+In the example above, we are required to enter a number.  If we enter a number, then the variable dblAmount will put the number into the Excel sheet at cell A1.  However, if we do not enter a number, then a message box will tell us that we did not enter a number and nothing will be put into cell A1.

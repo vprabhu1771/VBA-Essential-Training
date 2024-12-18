@@ -1,0 +1,1 @@
+Sheet names are stored in the Name property of the Sheets or Worksheets object.  The Sheet Name is the “tab” name that’s visible at the bottom of Excel:

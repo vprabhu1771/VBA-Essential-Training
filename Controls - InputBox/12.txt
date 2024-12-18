@@ -1,0 +1,21 @@
+The following code does three things:
+
+1. Prompts for input with an InputBox and assigns it to a variable
+
+2. Verifies input, otherwise exits the sub
+
+3. Returns the input in a message box
+
+Public Sub MyInputBox()
+
+Dim MyInput As String
+MyInput = InputBox("This is my InputBox", "MyInputTitle", "Enter your input text HERE")
+
+
+If MyInput = "Enter your input text HERE" Or MyInput = "" Then
+  Exit Sub
+End If
+
+MsgBox "The text from MyInputBox is " & MyInput
+
+End Sub

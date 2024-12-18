@@ -1,0 +1,4 @@
+Developer -> Visual Basic -> Insert -> Module
+
+
+Developer -> Macros -> Select -> Run

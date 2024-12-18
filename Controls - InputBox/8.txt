@@ -1,0 +1,1 @@
+If we were to enter a string instead of a number and then click on OK, we would get a Type Mismatch Error as a number variable does not accept a string.

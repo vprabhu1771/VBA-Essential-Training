@@ -1,0 +1,14 @@
+This example is from our article on Copying Sheets.
+
+After copying and pasting a Sheet, the newly created sheet becomes the ActiveSheet. So to rename a copied Sheet, simply use ActiveSheet.Name:
+
+Sub CopySheetRename2()
+
+    Sheets("Sheet1").Copy After:=Sheets(Sheets.Count)
+    On Error Resume Next
+    ActiveSheet.Name = "LastSheet"
+    On Error GoTo 0
+
+End Sub
+
+Note: We added error handling to avoid errors if the Sheet name already exists.

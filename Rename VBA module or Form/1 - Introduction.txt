@@ -1,0 +1,1 @@
+The first time you insert a module in VBA, it will automatically be given the name of “Module1” and subsequent module will become Module2, Module3 etc. Similarly, when you insert a UserForm it will be called UserForm1, UserForm2 etc.

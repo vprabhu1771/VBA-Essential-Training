@@ -1,0 +1,3 @@
+To clear a specific sheet use the following code where “Sheet1” is the name of the sheet to clear:
+
+Sheets("Sheet1").Cells.Clear

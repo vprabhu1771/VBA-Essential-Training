@@ -1,0 +1,3 @@
+Image 1. Insert a Spin button in the Worksheet
+
+When you select the Spin button which you inserted, you can click on Properties under the Developer tab:

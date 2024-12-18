@@ -1,0 +1,13 @@
+Sub delete_blank_rows()
+
+Dim sheet as Worksheet
+
+Set sheet = ActiveSheet
+
+sheet.Range("A1:A10").Select
+
+Selection.specialcells(xlcelltypeblanks).entirerow.select
+
+Selection.Delete
+
+End Sub

@@ -1,0 +1,22 @@
+Text in a text file is usually made up of several lines, separated by delimiters. These can be a comma (“,”), a comma with space (“, “), a semicolon (“;”), a  semicolon with space (“; “),  a space (“ “),  a tab (vbTab) or in rare cases any other character such as a tilde (~). The lines are normally separated by a line break (vbCRLF).
+
+The easiest way to read a text file line by line into our Worksheet in VBA is to select the first cell where we want the text to be put, and then run the following code:
+
+Sub ReadFile()
+
+   Dim strFile As String, strLine As String
+
+   strFile = "D:\color.txt"
+
+   Open strFile For Input As #1
+
+   Do Until EOF(1)
+      Line Input #1, strLine
+      ActiveCell = strLine
+      ActiveCell.Offset(1, 0).Select
+   Loop
+   Close #1
+
+End Sub
+
+This will put each line of the text file into a single cell in Excel.

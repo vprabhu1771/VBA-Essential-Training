@@ -1,0 +1,3 @@
+Here we use 1 to rename the first Sheet in the Workbook.
+
+Sheets(1).Name = "NewName"

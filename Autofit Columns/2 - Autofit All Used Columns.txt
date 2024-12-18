@@ -1,0 +1,16 @@
+What if you want to Autofit all of the used columns in a worksheet? Use the above method in combination with Count the Number of Used Columns, and a loop.
+
+The following code autofits all used columns using VBA:
+
+
+Sub AutofitAllUsed()
+
+Dim x As Integer
+
+For x = 1 To ActiveSheet.UsedRange.Columns.Count
+
+     Columns(x).EntireColumn.autofit
+
+Next x
+
+End Sub

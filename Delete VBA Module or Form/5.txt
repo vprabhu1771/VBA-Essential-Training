@@ -1,0 +1,1 @@
+A warning box will appear asking if you want to Export the module or form before you remove it. Exporting the module or form enables you to save it as an individual file for use in a different Excel project at some other time.

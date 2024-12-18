@@ -1,0 +1,3 @@
+We can declare a variable in our VBA code which then stores the information that is typed into the Input Box.  We can then use this variable in our code.
+
+Depending on the type of information we want returned from the input box, we can declare a specific type of variable to either return text (a string or variant variable) or to return a number (an integer, long, double or single variable).

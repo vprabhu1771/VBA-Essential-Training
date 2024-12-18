@@ -1,0 +1,1 @@
+We can either read the text file as an entire file, or line by line.

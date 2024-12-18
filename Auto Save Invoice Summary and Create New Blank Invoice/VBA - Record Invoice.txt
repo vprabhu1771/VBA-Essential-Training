@@ -1,0 +1,28 @@
+Sub recordinvoice()
+
+    Dim invoice_no As Long
+    Dim customer_name As String
+    Dim amount As Currency
+    Dim date_issue As Date
+    Dim term As String
+    Dim nextrec As Range
+
+
+    invoice_no = Range("e3")
+    customer_name = Range("b3")
+    date_issue = Range("e4")
+    amount = Range("e14")
+    term = Range("e5")
+    DueDate = Range("e6")
+    Set nextrec = Sheet2.Range("A1048576").End(xlUp).Offset(1, 0)
+
+    nextrec = invoice_no
+    nextrec.Offset(0, 1) = date_issue
+    nextrec.Offset(0, 2) = customer_name
+    nextrec.Offset(0, 3) = amount
+    nextrec.Offset(0, 4) = term
+    nextrec.Offset(0, 5) = DueDate
+
+    MsgBox "Invoice " & invoice_no & " is recorded"
+    
+End Sub

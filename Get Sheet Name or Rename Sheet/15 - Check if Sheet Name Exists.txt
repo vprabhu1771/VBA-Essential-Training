@@ -1,0 +1,22 @@
+We created a function to test if a Sheet with a particular name already exists.
+
+'Test if a Range Exists on a Sheet.
+'Leave range blank to test if sheet exists
+'Inputs:
+' WhatSheet - String Name of Sheet (ex "Sheet1")
+' WhatRange (Optional, Default = "A1") - String Name of Range (ex "A1")
+
+Function RangeExists(WhatSheet As String, Optional ByVal WhatRange As String = "A1") As Boolean
+    Dim test As Range
+    On Error Resume Next
+    Set test = ActiveWorkbook.Sheets(WhatSheet).Range(WhatRange)
+    RangeExists = Err.Number = 0
+    On Error GoTo 0
+End Function
+
+The function will return TRUE if the Sheet exists, or FALSE if it does not.
+Use the function like so:
+
+Sub Test_SheetExists()
+    MsgBox RangeExists("setup")
+End Sub

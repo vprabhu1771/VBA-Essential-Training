@@ -1,0 +1,19 @@
+The VBA input box works exactly the same way in Access as it does in Excel when returning user input in the form of a message box.
+
+However, if you wish to return the user input to the database, you would need to use the Recordset object rather than the Range object as used in Excel.
+
+
+Sub EnterInvoiceNumber()
+   Dim dbs As Database
+   Dim rst As Recordset
+   Set dbs = CurrentDb
+   Set rst = dbs.OpenRecordset("tblMatters", dbOpenDynaset)
+   With rst
+      .AddNew
+      !InvNo = InputBox("Please enter the Invoice Number", "INVOICE NUMBER GENERATION", 1)
+      .Update
+   End With
+   rst.Close
+   Set rst = Nothing
+   Set dbs = Nothing
+End Sub

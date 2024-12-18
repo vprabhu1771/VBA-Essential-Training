@@ -1,0 +1,3 @@
+This will display the ActiveSheet name in a message box:
+
+MsgBox ActiveSheet.Name

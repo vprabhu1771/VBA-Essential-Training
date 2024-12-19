@@ -1,5 +1,0 @@
-Sub exit_full_screen()
-
-Application.DisplayFullScreen = False
-
-End Sub

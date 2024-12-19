@@ -1,5 +1,0 @@
-Sub full_screen()
-
-Application.DisplayFullScreen = True
-
-End Sub

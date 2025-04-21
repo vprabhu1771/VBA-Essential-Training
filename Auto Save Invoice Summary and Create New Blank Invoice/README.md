@@ -1,3 +1,4 @@
+```
 Sub record_invoice()
 
     Dim invoice_no As Long
@@ -122,3 +123,4 @@ Sub clear_invoice()
     MsgBox "Form cleared.", vbInformation
 
 End Sub
+```

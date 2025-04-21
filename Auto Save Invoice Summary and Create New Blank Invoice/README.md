@@ -46,6 +46,9 @@ Sub record_invoice()
     
     ' Record the order items
     Call record_order_items(invoice_no)
+    
+    ' At the end of record_invoice
+    Call export_invoice_pdf(invoice_no)
 
     MsgBox "Invoice recorded successfully.", vbInformation
     
@@ -121,6 +124,31 @@ Sub clear_invoice()
     Range("A9:E100").ClearContents
 
     MsgBox "Form cleared.", vbInformation
+
+End Sub
+
+
+
+Sub export_invoice_pdf(invoice_no As Long)
+
+    Dim exportSheet As Worksheet
+    Set exportSheet = ThisWorkbook.Sheets("Invoice") ' Change if your sheet is named differently
+
+    Dim folderPath As String
+    folderPath = ThisWorkbook.Path & "\Invoices\" ' Save in "Invoices" folder in same directory
+
+    ' Create folder if it doesn't exist
+    If Dir(folderPath, vbDirectory) = "" Then
+        MkDir folderPath
+    End If
+
+    Dim pdfFileName As String
+    pdfFileName = folderPath & "Invoice_" & invoice_no & ".pdf"
+
+    ' Export as PDF
+    exportSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=pdfFileName, Quality:=xlQualityStandard
+
+    MsgBox "Invoice PDF saved to: " & pdfFileName, vbInformation
 
 End Sub
 ```
